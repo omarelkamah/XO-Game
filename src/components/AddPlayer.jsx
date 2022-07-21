@@ -1,14 +1,21 @@
 import React, { useRef } from 'react'
 import AddPlayerTitle from './AddPlayerTitle'
 
-const AddPlayer = ({ setPlayerOne }) => {
+const AddPlayer = ({ playerOne, setPlayerOne, playerTwo, setPlayerTwo }) => {
   const firstPlayerNameRef = useRef()
   const secondPlayerNameRef = useRef()
 
   const addPlayer = () => {
-    setPlayerOne(
-      `Player 1 name: ${firstPlayerNameRef.current.value} ${secondPlayerNameRef.current.value}`
-    )
+    if (playerOne === '') {
+      setPlayerOne(
+        `${firstPlayerNameRef.current.value} ${secondPlayerNameRef.current.value}`
+      )
+    } else if (playerTwo === '') {
+      setPlayerTwo(
+        ` ${firstPlayerNameRef.current.value} ${secondPlayerNameRef.current.value}`
+      )
+    }
+
     firstPlayerNameRef.current.value = ''
     secondPlayerNameRef.current.value = ''
   }
