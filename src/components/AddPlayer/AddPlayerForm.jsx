@@ -1,7 +1,13 @@
 import React, { useRef } from 'react'
 import AddPlayerTitle from './AddPlayerTitle'
 
-const AddPlayer = ({ playerOne, setPlayerOne, playerTwo, setPlayerTwo }) => {
+const AddPlayerForm = ({
+  playerOne,
+  setPlayerOne,
+  playerTwo,
+  setPlayerTwo,
+  setStartPlay
+}) => {
   const firstPlayerNameRef = useRef()
   const secondPlayerNameRef = useRef()
 
@@ -14,6 +20,7 @@ const AddPlayer = ({ playerOne, setPlayerOne, playerTwo, setPlayerTwo }) => {
       setPlayerTwo(
         ` ${firstPlayerNameRef.current.value} ${secondPlayerNameRef.current.value}`
       )
+      setStartPlay(true)
     }
 
     firstPlayerNameRef.current.value = ''
@@ -48,4 +55,4 @@ const AddPlayer = ({ playerOne, setPlayerOne, playerTwo, setPlayerTwo }) => {
   )
 }
 
-export default AddPlayer
+export default AddPlayerForm

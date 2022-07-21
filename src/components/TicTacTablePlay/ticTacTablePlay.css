@@ -1,0 +1,13 @@
+.cardTable {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cardTable div {
+  border: 2px solid black;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
