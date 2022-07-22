@@ -2,13 +2,15 @@ import React from 'react'
 import AddPlayerForm from './AddPlayerForm'
 import PlayersDetails from './PlayersDetails'
 
-const AddPlayer = ({
-  playerOne,
-  setPlayerOne,
-  playerTwo,
-  setPlayerTwo,
-  setStartPlay
-}) => {
+const AddPlayer = props => {
+  const {
+    playerOne,
+    setPlayerOne,
+    playerTwo,
+    setPlayerTwo,
+    setStartPlay
+  } = props
+
   return (
     <>
       <PlayersDetails playerOne={playerOne} playerTwo={playerTwo} />

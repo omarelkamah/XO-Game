@@ -10,6 +10,7 @@ const Table = ({ playerOne, playerTwo, activeUser, setActiveUser }) => {
   const [lineWinner, setLineWinner] = useState('')
   const [winnerTimes, setWinnerTimes] = useState({ x: 0, o: 0 })
 
+  // on Click on Card
   const handelClickOnBox = index => {
     let changedBoxs = [...boxs]
     changedBoxs[index] = !xNext ? 'x' : 'o'
@@ -19,6 +20,7 @@ const Table = ({ playerOne, playerTwo, activeUser, setActiveUser }) => {
     getWinner(changedBoxs)
   }
 
+  // check of winner or not and return it
   const getWinner = boxes => {
     const isWinner = checkWinner(boxes)
     if (isWinner) {
@@ -32,6 +34,7 @@ const Table = ({ playerOne, playerTwo, activeUser, setActiveUser }) => {
     }
   }
 
+  // Reset Game
   const handelResetButton = () => {
     setBoxs(['', '', '', '', '', '', '', '', ''])
     setWinner('')

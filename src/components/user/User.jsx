@@ -2,7 +2,6 @@ import React from 'react'
 import './user.css'
 
 const User = ({ playerOne, playerTwo, activeUser, winner, winnerTimes }) => {
-  // console.log(winnerTimes)
   return (
     <div
       className='userContainer'
