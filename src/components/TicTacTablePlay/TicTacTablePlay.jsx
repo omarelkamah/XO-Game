@@ -1,18 +1,17 @@
 import React from 'react'
 import './ticTacTablePlay.css'
 
-const TicTacTablePlay = () => {
+const TicTacTablePlay = ({ boxs, handelClickOnBox, lineWinner }) => {
   return (
     <div className='cardTable'>
-      <div>X</div>
-      <div>X</div>
-      <div>X</div>
-      <div>X</div>
-      <div>X</div>
-      <div>X</div>
-      <div>X</div>
-      <div>X</div>
-      <div>X</div>
+      {boxs.map((box, index) => (
+        <div
+          className={`${lineWinner.includes(index) && 'winCard'}`}
+          onClick={() => handelClickOnBox(index)}
+        >
+          {box}
+        </div>
+      ))}
     </div>
   )
 }

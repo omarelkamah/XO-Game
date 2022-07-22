@@ -59,4 +59,22 @@
   font-size: 12px;
   margin-top: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
+}
+.btnContainer {
+  display: flex;
+  justify-content: center;
+}
+.resetBtn {
+  background: var(--mainColor);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  /* text-align: center; */
 }

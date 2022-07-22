@@ -1,6 +1,7 @@
 .cardTable {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 30px;
 }
 
 .cardTable div {
@@ -10,4 +11,14 @@
   align-items: center;
   justify-content: center;
   font-size: 30px;
+  font-weight: bold;
+  height: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cardTable div.winCard,
+.cardTable div:hover {
+  background-color: #c0ffd6b0;
 }

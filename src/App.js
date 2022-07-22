@@ -8,15 +8,19 @@ function App() {
   const [playerOne, setPlayerOne] = useState("");
   const [playerTwo, setPlayerTwo] = useState("");
   const [startPlay, setStartPlay] = useState(false);
-
-  console.log(playerOne);
+  const [activeUser, setActiveUser] = useState("x");
 
   return (
     <div className="appContainer">
       <Heading />
 
       {startPlay ? (
-        <Table playerOne={playerOne} playerTwo={playerTwo} />
+        <Table
+          playerOne={playerOne}
+          playerTwo={playerTwo}
+          setActiveUser={setActiveUser}
+          activeUser={activeUser}
+        />
       ) : (
         <AddPlayer
           playerOne={playerOne}

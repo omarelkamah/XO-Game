@@ -26,10 +26,10 @@
 }
 
 .userIconActive {
-  border-color: var(--mainColor);
-  color: var(--mainColor);
+  border-color: #2ba400;
+  color: #2ba400;
 }
 
 .userActive {
-  color: var(--mainColor);
+  color: #2ba400;
 }
